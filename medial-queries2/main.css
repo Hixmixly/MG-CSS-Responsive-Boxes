@@ -3,7 +3,7 @@ body {
 }
 
 * {
-  border: 1px solid teal;
+  border: 1px solid blue;
   box-sizing: border-box;
 }
 
@@ -21,16 +21,18 @@ body {
   flex-grow: 3;
   justify-content: space-between;
   align-items: center;
-  min-height: 70vh;
+  min-width: 70vh;
+
 }
 
-header, footer, aside, .wrapper  {
-  flex-grow: 1;
-  margin: .5em;
-  max-height: 10vh;
+.a, .wrapper, .f, aside {
+flex-grow: 1;
+margin: .5em;
+max-height: 10vh;
+
 }
 
-aside  {
+aside {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -41,7 +43,7 @@ aside  {
 aside > div {
   flex-grow: 10;
   margin: .5em;
-  /* min-width: 20vh; */
+
 }
 
 main {
@@ -50,24 +52,28 @@ main {
   margin: .5em;
 }
 
-
 @media (min-width: 600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  header {
-    width: 100%;
-    max-height: 10vh;
-  }
+
   .wrapper {
     justify-content: stretch;
     flex-basis: 70%;
-      min-height:  80vh;
+     min-height: 80vh;
   }
-  footer {
+
+  .a {
+    width: 100%;
+    max-height: 10vh;
+  }
+
+  .f {
     margin: .5em;
     flex-grow: 3;
-    min-height:  80vh;
+    min-height: 80vh;
   }
+
+
 }
